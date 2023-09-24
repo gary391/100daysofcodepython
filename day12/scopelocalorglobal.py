@@ -29,7 +29,7 @@ def create_enemy():
     new_enemy = enemies[0]
   print(new_enemy)
 
-print("outside:" +  new_enemy) # can't be accessed from outside the function
+print("outside:" +  new_enemy) # can't be accessed from outside the function hence will give a name error
 
 """
 Certainly! In Java, variables can have block-level scope. Here's an example in Java demonstrating block scope:
