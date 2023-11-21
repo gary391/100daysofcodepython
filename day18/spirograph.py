@@ -61,14 +61,23 @@ timmy_the_turtle.pensize(1)
 timmy_the_turtle.speed("fastest") # fastest
 # timmy_the_turtle.speed(10)
 
+#
+#
+# for to_angle in r_direction:
+#     timmy_the_turtle.pencolor(random_color())
+# #TODO: Repeatedly draw a circle and change the tilt of the circle each time.
+#     timmy_the_turtle.setheading(to_angle)
+#     #TODO: How to create a circle with a radius of 100
+#     timmy_the_turtle.circle(100, 360, 100)
+def draw_spirograph(size_of_gap):
 
+    for _ in range(int(360 / size_of_gap)):
+        timmy_the_turtle.pencolor(random_color())
+        timmy_the_turtle.circle(100, 360, 100)
+        # this how we are setting the heading based on the current value of the heading. 
+        timmy_the_turtle.setheading(timmy_the_turtle.heading() + size_of_gap)
 
-for to_angle in r_direction:
-    timmy_the_turtle.pencolor(random_color())
-#TODO: Repeatedly draw a circle and change the tilt of the circle each time.
-    timmy_the_turtle.setheading(to_angle)
-    #TODO: How to create a circle with a radius of 100
-    timmy_the_turtle.circle(100, 360, 100)
+draw_spirograph(5)
 #Allows the screen to remain on.
 
 screen = Screen()
