@@ -10,6 +10,8 @@
 
 from turtle import Screen, Turtle
 import time
+from food import Food
+from scoreboard import Scoreboard
 from snake import Snake
 
 screen = Screen()
@@ -23,6 +25,8 @@ screen.tracer(0) # this will turn off the tracer - Now we will need to use the u
 
 
 snake = Snake()
+food = Food()
+scoreboard = Scoreboard()
 
 
 
@@ -34,19 +38,44 @@ screen.onkey(snake.right, "Right")
 
 #Move the snake
 game_is_on = True
-
+score_count = 0
 while game_is_on:
-
+    scoreboard.score_display(score_count)
     screen.update()
     time.sleep(0.1)
     snake.move()
 
 
-    # move each of the segments
-    # for seg in segments:
-    #     seg.forward(20)
-        # This will update the screen for each segment
-        # screen.update()
+    # Detect collision of food with the snake
+    # for this you can use distance method of the turtle
+    if snake.head.distance(food) < 15:
+        print(" Oh! Yaa delicious")
+        # Create a score board using the turtle write
+        scoreboard.score_clear()
+        score_count = score_count + 1
+        snake.extend()
+        food.refresh()
+
+    # Detect collision with wall.
+    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+        game_is_on = False
+        scoreboard.game_over()
+
+
+    # Detect collision with tail
+    # snake.head = snake.segments[-1]
+    # for segment in snake.segments:
+    #     if segment == snake.head:
+    #         pass
+    #     elif snake.head.distance(segment) < 10:
+    #         game_is_on = False
+    #         scoreboard.game_over()
+        for segment in snake.segments[1:]:
+            if snake.head.distance(segment) < 10:
+                game_is_on = False
+                scoreboard.game_over()
+    # if the head collides with any segment in the tail:
+        # trigger game_over
 
 
 
