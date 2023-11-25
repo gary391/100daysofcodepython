@@ -41,6 +41,8 @@ game_is_on = True
 score_count = 0
 while game_is_on:
     scoreboard.score_display(score_count)
+    # when we disable the animation we will need a way to update the screen manually
+    # Adding the update in a while loop can help
     screen.update()
     time.sleep(0.1)
     snake.move()

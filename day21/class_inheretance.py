@@ -17,7 +17,7 @@ class Fish(Animal): # Inhertance
     def __init__(self):
         super().__init__()
 
-    def swin(self):
+    def swim(self):
         print("moving in water.")
     # def __init__(self):
     #     super().__init__() # refer to the super class that is being inhereted from
@@ -26,7 +26,7 @@ class Fish(Animal): # Inhertance
         super().breathe()
         print("breathe inside the water")
 nemo = Fish()
-nemo.swin()
+nemo.swim()
 nemo.breathe()
 print(nemo.num_eyes)
 
