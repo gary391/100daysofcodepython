@@ -42,7 +42,7 @@ score_count_r = 0
 
 while game_is_on:
     scoreboard.score_display(score_count_l, score_count_r)
-    time.sleep(0.1)
+    time.sleep(ball.ball_speed)
     screen.update()
     # when we disable the animation we will need a way to update the screen manually
     # Adding the update in a while loop can help
@@ -59,6 +59,8 @@ while game_is_on:
     if ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) < 50 and ball.xcor() < -320:
         print("Made a contact")
         ball.bounce_x()
+
+
 
     # Detect R paddle misses
     if ball.xcor() > 350:

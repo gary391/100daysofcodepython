@@ -2,6 +2,7 @@ from turtle import Turtle
 import random
 UP_RIGHT = 30
 MOVE_DISTANCE = 20
+
 class Ball(Turtle):
 
     def __init__(self):
@@ -14,6 +15,7 @@ class Ball(Turtle):
         self.speed("fastest")
         self.x_move = 10
         self.y_move = 10
+        self.ball_speed = 0.1
 
     # def move(self):
     #     self.setheading(UP_RIGHT)
@@ -27,11 +29,14 @@ class Ball(Turtle):
 
     def bounce_y(self):
         self.y_move *= -1
+        self.ball_speed*0.9
 
     def bounce_x(self):
         self.x_move *= -1
+        self.ball_speed*0.9
 
     def reset(self):
+        self.ball_speed = 0.1
         self.goto(0, 0)
         self.bounce_x()
 
