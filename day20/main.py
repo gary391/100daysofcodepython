@@ -38,9 +38,9 @@ screen.onkey(snake.right, "Right")
 
 #Move the snake
 game_is_on = True
-score_count = 0
+# score_count = 0
 while game_is_on:
-    scoreboard.score_display(score_count)
+    scoreboard.score_display()
     # when we disable the animation we will need a way to update the screen manually
     # Adding the update in a while loop can help
     screen.update()
@@ -53,15 +53,16 @@ while game_is_on:
     if snake.head.distance(food) < 15:
         print(" Oh! Yaa delicious")
         # Create a score board using the turtle write
-        scoreboard.score_clear()
-        score_count = score_count + 1
+        # scoreboard.score_clear()
+        scoreboard.increase_score()
         snake.extend()
         food.refresh()
 
     # Detect collision with wall.
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
-        game_is_on = False
-        scoreboard.game_over()
+        # game_is_on = False
+        scoreboard.reset()
+        snake.reset()
 
 
     # Detect collision with tail
@@ -74,8 +75,9 @@ while game_is_on:
     #         scoreboard.game_over()
         for segment in snake.segments[1:]:
             if snake.head.distance(segment) < 10:
-                game_is_on = False
-                scoreboard.game_over()
+                # game_is_on = False
+                scoreboard.reset()
+                snake.reset()
     # if the head collides with any segment in the tail:
         # trigger game_over
 
