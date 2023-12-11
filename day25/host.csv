@@ -1,0 +1,4 @@
+sbc_instance,sbc_type,sbc_ip
+vtc-xx-xxxx-2-i-xxxxxxx-esbc,Peering,xxx.xxx.xxx.154
+vtc-xx-xxxx-2-i-xxxxxcc-esbc,Peering,xxx.xxx.xxx.158
+vtc-xx-xxxx-2-i-xxxxec3-esbc,Peering,xxx.xxx.xxx.111
