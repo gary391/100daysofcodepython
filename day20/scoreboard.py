@@ -46,7 +46,7 @@ class Scoreboard(Turtle):
     #     self.write("GAME OVER", move=False, align=ALIGNMENT, font=FONT)
 
     def reset(self):
-        print("reset happend!!")
+        print("reset happened!!")
         print( f"read value: {self.read_high_score_store()}")
         print( f"score value: {self.score}")
         if self.score > (self.read_high_score_store()):

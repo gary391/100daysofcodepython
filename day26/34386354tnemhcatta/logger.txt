@@ -1,0 +1,19 @@
+It is enough to start the logger.pl (perl logger.pl), after starting this script you can verify that the OS is listening at the 2500 port (netstat -na | grep 2500).
+Another thing I would suggested was to increment the number of files that the logger.pl will make before the offboxlogs rollback, the script parameter that control this is the $maxFiles=12; by default only 12 files are created per log type e.g 12 sipmsg, 12 log.sipd
+
+
+If changging on the log server the number of files to create it is important to restart the logger on the server.
+
+After inputing "logger stop" (log server) do a "ps -ef | grep logg" if you have a input that the process is still running kill the process.
+
+e.g:
+root@ubunto:/acmelog# ./logger stop
+root@ubunto:/acmelog# ps -ef | grep logg
+root 2834 1 2 14:24 pts/1 00:00:05 /usr/bin/perl -w /acmelog/logger.pl
+root 2898 1846 0 14:28 pts/1 00:00:00 grep logg
+root@ubunto:/acmelog# 
+root@ubunto:/acmelog# kill -9 2834
+root@ubunto:/acmelog# 
+root@ubunto:/acmelog# ps -ef | grep logg
+root 2900 1846 0 14:28 pts/1 00:00:00 grep logg
+root@ubunto:/acmelog#

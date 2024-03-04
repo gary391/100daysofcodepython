@@ -26,11 +26,13 @@ INVITES = './Input/Names/invited_names.txt'
 STARTING_LETTER = './Input/Letters/starting_letter.txt'
 OUTPUT = './Output/ReadyToSend'
 
-
 def read_names_file(file_path):
+    '''
+    Opens the file, returns a list containing each line in the file as a list items
+    which is the list of names.
+    '''
     with open(file_path, mode="r") as file:
         return (file.readlines())
-
 
 def replace_name_in_letter(file_path, invitee):
     with open(file_path, mode='r') as file:
@@ -39,8 +41,8 @@ def replace_name_in_letter(file_path, invitee):
         return x
 
 
-def write_letter(OUTPUT, content, invitee):
-    with open(OUTPUT+f'/letter_for_{invitee}.txt', mode='w') as file:
+def write_letter(file_path, content, invitee):
+    with open(file_path+f'/letter_for_{invitee}.txt', mode='w') as file:
         file.write(content)
 
 
