@@ -8,7 +8,7 @@ screen.title("U.S. States Games")
 image = "blank_states_img.gif"
 screen.addshape(image)
 # Once you have added the image to the screen,
-# than it is available to the turtle
+# then it is available to the turtle
 turtle.shape(image)
 total_count = 50
 guessed_state = []
