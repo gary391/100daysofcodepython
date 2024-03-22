@@ -1,0 +1,10 @@
+abcd@com|abc@xyz.com|fdsafdsa232342
+xyz@com|dsafds@avd.com|fdsafds323
+Amazon|abc@xyz.com|fdsafds
+Amazon | abc@xyz.com | fasdfd
+fdsaf | fdsa | dssaf
+ |  | 
+Amazon.ca | abc@xyz.com | 1234565789
+ | abc@xyz.com | 
+afdsa | abc@xyz.com | fdsa
+fdsafds | abc@xyz.com | fdsafdsa
