@@ -64,7 +64,7 @@ def email_quote():
         # Create a tls connection
         connection.starttls()
         connection.login(user=my_email, password=password)
-        connection.sendmail(from_addr=my_email, to_addrs="deepaliyadav191@gmail.com",
+        connection.sendmail(from_addr=my_email, to_addrs="codewithgary@gmail.com",
                             msg=msg)
 
 

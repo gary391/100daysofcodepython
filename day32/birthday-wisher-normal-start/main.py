@@ -99,7 +99,7 @@ def email_quote(file_path, invitee):
         # Create a tls connection
         connection.starttls()
         connection.login(user=my_email, password=password)
-        connection.sendmail(from_addr=my_email, to_addrs="mayank646@gmail.com",
+        connection.sendmail(from_addr=my_email, to_addrs="codewithgary@gmail.com",
                             msg=msg)
 this_letter = random.randint(1,3)
 LETTER = f'./letter_templates/letter_{this_letter}.txt'
