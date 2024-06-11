@@ -29,11 +29,13 @@ sunset = data["results"]["sunset"]
 sunrise_time = (sunrise.split("T")[1])
 # print(sunrise_time)
 sunrise_time_hour = sunrise_time.split(":")[0]
-print(sunrise_time_hour)
+print(f'sunrise_time_hour: {sunrise_time_hour}')
 sunset_time = (sunset.split("T")[1])
 # print(sunset_time)
 sunset_time_hour = sunset_time.split(":")[0]
-print(sunset_time_hour)
+print(f'sunset_time_hour: {sunset_time_hour}')
 
 time_now = datetime.now()
-print(time_now.hour)
+print(f"time_now.hour: {time_now.hour}")
+
+
