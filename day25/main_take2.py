@@ -77,7 +77,7 @@ import pandas
 # }
 #
 # data = pandas.DataFrame(data_dict)
-# print(data.to_csv('out.csv'))
+# print(data.to_csv('out_color.csv'))
 
 
 # Create a data frame for squirrels
@@ -109,7 +109,7 @@ data_dict = {
 }
 
 data = pandas.DataFrame(data_dict)
-print(data.to_csv('out.csv'))
+print(data.to_csv('out_color.csv'))
 
 '''
 fur, color, count
@@ -117,3 +117,10 @@ fur, color, count
 1, red, <>
 2, black, <>
 '''
+df = pandas.read_csv("out_color.csv")
+l = df.values.tolist()
+print(l) # This will return list of list
+
+# For getting only list you can use flatten
+flatten_list = df.values.flatten().tolist()
+print(flatten_list)
