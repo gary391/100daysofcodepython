@@ -19,17 +19,17 @@ password = "#############"
 
 # import datetime as dt
 #
-# now = dt.datetime.now()
-# print(type(now))
-# print(f"Year: {now.year}")
-# if now.year == 2024:
-#     print("Prioritize health")
+now = dt.datetime.now() # Current date time.
+print(type(now))
+print(f"Year: {now.year}")
+if now.year == 2025:
+# print("Prioritize health")
 # print(f"Month: {now.month}")
 # print(f"Day: {now.day}")
-# print(f"Day of the week: {now.weekday()}")
+    print(f"Day of the week: {now.weekday()}")
 #
-# date_of_birth = dt.datetime(year=1995, month=12, day=15,hour=4)
-# print(date_of_birth)
+date_of_birth = dt.datetime(year=1995, month=12, day=15)
+print(date_of_birth)
 
 
 """

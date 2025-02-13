@@ -51,7 +51,7 @@ def sent_email(file_location):
     my_email = "codewithgary@gmail.com"
     to_email = "codewithgary@yahoo.com"
     # way to connect to gmail
-    password = "aged qjyq zeii gyxs"
+    password = "ADD THE PASSWORD HERE"
     quotes = get_quotes(file_location)
     with smtplib.SMTP("smtp.gmail.com", 587) as connection:
         connection.starttls() # enable tls connection
